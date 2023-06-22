@@ -1,0 +1,365 @@
+/*TODO: Diseño Principal */
+
+/*? Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+:root {
+    --main-color: #6d2c7d;
+    --secondary-color: white;
+    --third-color: blueviolet;
+    --main-font: 'Rajdhani';
+    --texto-font: 'Ubuntu';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/*? Diseño de la barra de navegacion */
+.container-hero {
+    display: flex;
+    padding: .5rem;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    background: #2c2cab;
+    background: -webkit-linear-gradient(to right, #4254a2, #4D5763);
+    background: linear-gradient(to right, #556E84, #FA261C);
+}
+
+.container-hero span {
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-left: 1rem;
+    margin-top: .6rem;
+    margin-right: 2rem;
+    font-family: var(--main-font), sans-serif;
+    font-size: 25px;
+    text-align: left;
+
+}
+
+.container-hero a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-family: var(--main-font), sans-serif;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    top: 0;
+}
+
+.container-hero a:hover {
+    color: skyblue;
+}
+
+.container-hero img {
+    margin-top: .5rem;
+    margin-left: 15px;
+}
+
+.container-hero .car {
+    margin-left: 35rem;
+}
+
+/*? Seccion de la imagen */
+.index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 80vh;
+    background-image: url("../src/img/LOGO.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-top: 5rem;
+}
+
+.titulo-index {
+    text-align: center;
+    font-family: var(--main-font), sans-serif;
+    font-size: 80px;
+    background: -webkit-linear-gradient(#fdfdfd, #908a90);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+main section div {
+    text-align: center;
+}
+
+main section div span {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: var(--main-font), sans-serif;
+    margin-top: 37rem;
+}
+
+.hero {
+    display: flex;
+    margin: 2.5rem;
+    border: black 2px solid;
+    text-align: center;
+    box-shadow: 1px 1px 1px 2px #d3d3d3d1;
+}
+
+.slogan {
+    font-size: 17px;
+    font-family: var(--main-font), sans-serif;
+}
+
+main section div ul li {
+    list-style: none;
+    padding: 1.5rem;
+    display: inline;
+    font-family: var(--main-font), sans-serif;
+}
+
+.sellos {
+    margin-left: 15rem;
+}
+
+/*? Seccion de Promociones */
+.super-promo {
+    border: black 1.6px solid;
+    margin: 2rem;
+    object-fit: fill;
+    box-shadow: 2px 2px 2px 4px #cbc9c9;
+}
+
+.title-promo {
+    color: red;
+    text-align: left;
+    margin-left: 4rem;
+    font-style: italic;
+}
+
+.cards {
+    display: flex;
+}
+
+.card {
+    border: black 1px solid;
+    margin-left: 2rem;
+    border-radius: 10px;
+    margin-right: 10px;
+    box-shadow: 1px 1px 1px 1px #d3d3d3d1;
+}
+
+.card-margin {
+    border: red 1px solid;
+    background-color: red;
+    border-radius: 10px;
+    width: 150px;
+    margin-left: 1rem;
+}
+
+.card-text {
+    color: var(--secondary-color);
+    font-family: var(--main-font), sans-serif;
+    margin-top: 2px;
+    text-align: left;
+}
+
+.card2 {
+    border: black 1px solid;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px #d3d3d3d1;
+    width: 68rem;
+    margin-right: 2rem;
+}
+
+.btn1 {
+    font-family: var(--texto-font), sans-serif;
+    font-size: 16px;
+    color: var(--secondary-color);
+    background-color: rgb(178, 0, 0);
+    margin-bottom: 1rem;
+    width: 160px;
+    height: 28px;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.btn1:hover {
+    background-color: red;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.promo-title {
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 35px;
+    background: -webkit-linear-gradient(#fc9797, #ba0a0a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*? Sección Catalogo de Productos */
+.titulo-card {
+    font-family: var(--main-font), sans-serif;
+    background: -webkit-linear-gradient(#fa0505, #0404ba);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 35px;
+    margin-top: 5rem;
+}
+
+.mas-vendidos {
+    color: #FA261C;
+    font-size: 25px;
+    text-align: left;
+    margin-left: 20px;
+    font-weight: bold;
+    font-family: var(--main-font), sans-serif;
+}
+
+.card-product {
+    display: flex;
+}
+
+.card-product1 {
+    margin: 1rem;
+    display: grid;
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px #d3d3d3d1;
+    border-radius: 10px;
+}
+
+.card-header {
+    font-family: var(--main-font);
+    border-radius: 10px;
+    background: #9D50BB;
+    background: -webkit-linear-gradient(to right, #a24287, #dc5858);
+    background: linear-gradient(to right, #aa487b, #e02a2a);
+    font-family: var(--main-font), sans-serif;
+    color: var(--secondary-color);
+    font-size: 20px;
+}
+
+.card-body p {
+    margin: .5rem;
+    justify-content: center;
+    font-family: var(--texto-font), sans-serif;
+    color: black;
+}
+
+/*? Seccion Socios */
+.titulo-socios {
+    text-align: center;
+    font-family: var(--main-font), sans-serif;
+    font-size: 35px;
+    background: -webkit-linear-gradient(#fa0505, #0404ba);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.socios {
+    border: black 1px solid;
+    box-shadow: 1px 1px 1px 1px #d3d3d3d1;
+    margin: 1rem;
+    display: flex;
+}
+
+.socios img {
+    margin: 1rem;
+    padding: 5px;
+    width: 500px;
+    height: 200px;
+}
+
+/*? Seccion Nosotros */
+.nosotros {
+    box-shadow: 1px 1px 1px 1px #d3d3d3d1;
+    display: flex;
+    margin: 1rem;
+}
+
+.nosotros img {
+    padding: 1rem;
+    width: 500px;
+    height: 250px;
+}
+
+.nosotros-texto {
+    display: block;
+}
+
+.nosotros-texto h3 {
+    font-size: 30px;
+    font-family: var(--main-font), sans-serif;
+    background: -webkit-linear-gradient(#fc9797, #ba0a0a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nosotros-texto p {
+    font-family: var(--texto-font), sans-serif;
+    margin: 2rem;
+}
+
+.btn2 {
+    margin-bottom: 25px;
+    font-family: var(--texto-font), sans-serif;
+    font-size: 17px;
+    color: red;
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    border: red 1px solid;
+    padding: 10px 12px;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn2:hover {
+    color: var(--secondary-color);
+    background-color: red;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*? Seccion Footer */
+.footer {
+    display: flex;
+    width: 100%;
+    background-color: red;
+}
+
+.footer span {
+    color: var(--secondary-color);
+    font-size: 18px;
+    margin: 1rem;
+    font-family: var(--texto-font), sans-serif;
+}
+
+.img-footer {
+    display: block;
+    padding: 13px;
+}
+
+.item {
+    margin-left: 65rem;
+    margin-right: 10px;
+}
+
+.item1 {
+    margin-right: 10px;
+}
