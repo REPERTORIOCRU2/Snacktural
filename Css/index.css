@@ -1,6 +1,4 @@
-/*TODO: Diseño Principal */
-
-/*? Fuentes */
+/*Todo: Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
@@ -18,6 +16,7 @@ html {
 }
 
 * {
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -25,56 +24,96 @@ body {
     margin: 0;
 }
 
-/*? Diseño de la barra de navegacion */
-.container-hero {
-    display: flex;
-    padding: .5rem;
-    position: fixed;
-    overflow: hidden;
-    width: 100%;
-    top: 0;
-    background: #2c2cab;
-    background: -webkit-linear-gradient(to right, #4254a2, #4D5763);
-    background: linear-gradient(to right, #556E84, #FA261C);
+/*Todo: Diseño de la barra de navegacion */
+.lista {
+    list-style: none;
 }
 
-.container-hero span {
-    color: var(--secondary-color);
-    font-weight: bold;
-    margin-left: 1rem;
-    margin-top: .6rem;
-    margin-right: 2rem;
-    font-family: var(--main-font), sans-serif;
-    font-size: 25px;
-    text-align: left;
-
-}
-
-.container-hero a {
+.lista a {
     text-decoration: none;
-    color: var(--secondary-color);
-    font-family: var(--main-font), sans-serif;
-    float: left;
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    top: 0;
+    font-size: 20px;
+    font-family: var(--texto-font);
+    color: black;
 }
 
-.container-hero a:hover {
-    color: skyblue;
+.lista a:hover {
+    background: -webkit-linear-gradient(#fa0505, #0404ba);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.container-hero img {
-    margin-top: .5rem;
-    margin-left: 15px;
+header {
+    position: relative;
+    padding: 0 2rem;
 }
 
-.container-hero .car {
-    margin-left: 35rem;
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
 }
 
-/*? Seccion de la imagen */
+.navbar .logo span {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: var(--main-font);
+}
+
+.navbar .link {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown_menu {
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.shopping {
+    font-size: 25px;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.shopping:hover {
+    scale: 1.2;
+}
+
+.shopping:active {
+    scale: 0.95;
+}
+
+/*? Responsive Navbar */
+@media(max-width: 992px) {
+
+    .navbar .link,
+    .navbar {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+}
+
+/*Todo: Seccion de la imagen */
 .index {
     display: flex;
     align-items: center;
@@ -86,7 +125,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    margin-top: 5rem;
+    margin-top: 2rem;
+    object-fit: cover;
 }
 
 .titulo-index {
@@ -113,7 +153,7 @@ main section div span {
 .hero {
     display: flex;
     margin: 2.5rem;
-    border: black 2px solid;
+    border: rgb(222, 220, 220) 2px solid;
     text-align: center;
     box-shadow: 1px 1px 1px 2px #d3d3d3d1;
 }
@@ -134,9 +174,9 @@ main section div ul li {
     margin-left: 15rem;
 }
 
-/*? Seccion de Promociones */
+/*Todo: Seccion de Promociones */
 .super-promo {
-    border: black 1.6px solid;
+    border: rgb(222, 220, 220) 2px solid;
     margin: 2rem;
     object-fit: fill;
     box-shadow: 2px 2px 2px 4px #cbc9c9;
@@ -154,7 +194,7 @@ main section div ul li {
 }
 
 .card {
-    border: black 1px solid;
+    border: rgb(222, 220, 220) 2px solid;
     margin-left: 2rem;
     border-radius: 10px;
     margin-right: 10px;
@@ -177,7 +217,7 @@ main section div ul li {
 }
 
 .card2 {
-    border: black 1px solid;
+    border: rgb(222, 220, 220) 2px solid;
     border-radius: 10px;
     box-shadow: 1px 1px 1px 1px #d3d3d3d1;
     width: 68rem;
@@ -198,11 +238,17 @@ main section div ul li {
     cursor: pointer;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    transition: scale 0.2 ease;
 }
 
 .btn1:hover {
     background-color: red;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    scale: 1.05;
+}
+
+.btn1:active {
+    scale: 0.95;
 }
 
 .promo-title {
@@ -213,7 +259,7 @@ main section div ul li {
     -webkit-text-fill-color: transparent;
 }
 
-/*? Sección Catalogo de Productos */
+/*Todo: Sección Catalogo de Productos */
 .titulo-card {
     font-family: var(--main-font), sans-serif;
     background: -webkit-linear-gradient(#fa0505, #0404ba);
@@ -262,7 +308,10 @@ main section div ul li {
     color: black;
 }
 
-/*? Seccion Socios */
+/*? Slider de productos */
+
+
+/*Todo: Seccion Socios */
 .titulo-socios {
     text-align: center;
     font-family: var(--main-font), sans-serif;
@@ -273,7 +322,7 @@ main section div ul li {
 }
 
 .socios {
-    border: black 1px solid;
+    border: rgb(222, 220, 220) 2px solid;
     box-shadow: 1px 1px 1px 1px #d3d3d3d1;
     margin: 1rem;
     display: flex;
@@ -284,19 +333,50 @@ main section div ul li {
     padding: 5px;
     width: 500px;
     height: 200px;
+    object-fit: cover;
 }
 
-/*? Seccion Nosotros */
+/*? Modal para Contactarnos */
+.contenedor-modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #c3c3c3;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100%;
+}
+
+#lanzar-modal:checked~.contenedor-modal {
+    display: flex;
+}
+
+.modal {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 1px 1px 1px 2px #828282d1;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+/*Todo: Seccion Nosotros */
 .nosotros {
+    border: rgb(222, 220, 220) 2px solid;
     box-shadow: 1px 1px 1px 1px #d3d3d3d1;
     display: flex;
     margin: 1rem;
 }
 
 .nosotros img {
+    margin-top: 50px;
     padding: 1rem;
     width: 500px;
     height: 250px;
+    object-fit: cover;
 }
 
 .nosotros-texto {
@@ -304,7 +384,7 @@ main section div ul li {
 }
 
 .nosotros-texto h3 {
-    font-size: 30px;
+    font-size: 40px;
     font-family: var(--main-font), sans-serif;
     background: -webkit-linear-gradient(#fc9797, #ba0a0a);
     -webkit-background-clip: text;
@@ -325,41 +405,159 @@ main section div ul li {
     border-radius: 15px;
     border: red 1px solid;
     padding: 10px 12px;
-    position: relative;
     text-align: center;
+    transition: scale 0.2 ease;
     cursor: pointer;
 }
 
 .btn2:hover {
     color: var(--secondary-color);
     background-color: red;
+    scale: 1.05;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-/*? Seccion Footer */
-.footer {
+.btn2:active {
+    scale: 0.95;
+}
+
+/*Todo: Seccion de Preguntas */
+.preguntas {
     display: flex;
-    width: 100%;
-    background-color: red;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 80vh;
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("https://cdn.pixabay.com/photo/2017/05/07/19/32/strawberry-2293337_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-top: 5rem;
+    object-fit: cover;
 }
 
-.footer span {
-    color: var(--secondary-color);
-    font-size: 18px;
-    margin: 1rem;
-    font-family: var(--texto-font), sans-serif;
+.ayuda {
+    text-align: center;
+    font-family: var(--main-font), sans-serif;
+    font-size: 40px;
+    background: -webkit-linear-gradient(#ffffff, #b2b2b2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.img-footer {
-    display: block;
-    padding: 13px;
+.questions {
+    background-image: url("../src/img/search.svg");
+    background-repeat: no-repeat;
+    position: relative;
+    padding-left: 40px;
+    background-position: 10px 10px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px 1px #d3d3d3d1;
+    border: none;
+    width: 500px;
+    height: 40px;
+    object-fit: cover;
+    outline: none;
 }
 
-.item {
-    margin-left: 65rem;
+/*Todo: Seccion Footer */
+footer {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 0 30px;
+}
+
+footer.top {
+    border-bottom: 2px solid #3a4f6a;
+    padding-bottom: 20px;
+}
+
+footer.top .links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+footer.top a {
+    text-decoration: none;
+    cursor: pointer;
+    font-family: var(--texto-font);
+    color: black;
+}
+
+footer.top a:hover {
+    color: #ba0a0a;
+}
+
+footer.bottom {
+    padding: 20px 0;
+    justify-content: space-between;
+}
+
+footer .links>div {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+footer h2 {
+    margin: 0;
+    font-size: 20px;
+    font-family: var(--main-font);
+    font-weight: 400;
+    color: red;
+}
+
+footer .legal {
+    font-size: 17px;
+    font-family: var(--texto-font);
+}
+
+footer .legal>a {
+    margin: 0 4px;
+}
+
+footer .legal>span {
     margin-right: 10px;
 }
 
-.item1 {
-    margin-right: 10px;
+footer.bottom .links {
+    display: flex;
+    gap: 18px;
+}
+
+@media (width < 620px) {
+    footer {
+        flex-direction: column;
+    }
+
+    footer.bottom {
+        gap: 16px;
+        flex-direction: column-reverse;
+    }
+}
+
+@media (width < 420px) {
+    footer {
+        text-align: center;
+        align-items: center;
+    }
+
+    footer.top .links {
+        grid-template-columns: 1fr;
+    }
+
+    footer.bottom {
+        align-items: center;
+    }
+
+    footer .legal>span {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 2px;
+    }
 }

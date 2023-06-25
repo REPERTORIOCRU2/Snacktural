@@ -5,42 +5,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--? Enlazar Estilos -->
+    <!--? Importar Css -->
     <link rel="stylesheet" href="./Css/index.css">
     <link rel="stylesheet" href="./Css/movile_style.css">
-    <!--? Enlazar Icono -->
+    <!--? Importar Js -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./Js/Alert.js"></script>
+    <!--? Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!--? Importar Icono -->
     <link rel="shortcut icon" href="./src/strawberry_logo.svg" type="image/x-icon">
-    <!--? Enlazar Google Fonts -->
+    <!--? Importar Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!--? Importar Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <!--? Importar Animacion -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Snaktural</title>
 </head>
 
 <body>
-    <!--TODO: Codificacion de la pagina principal -->
-
-    <head>
-        <!--? Barra de Navegación -->
-        <nav class="container-hero">
-            <span>Snacktural</span>
-            <a href="#">Inicio</a>
-            <a href="#promociones">Promociones</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#">Mayoristas</a>
-            <a href="#contactanos">Contactanos</a>
-            <a href="#">FAQs</a>
-            <a href="#">Redes Sociales</a>
-            <img class="car" src="./src/img/cart3.svg" height="25px" />
-            <img src="./src/img/person.svg" height="25px" />
-        </nav>
-    </head>
-    <main>
-        <!--? Sección principal del Inicio -->
-        <section>
-            <div class="index">
-                <!--<span>Botanas de Frutos Rojos · <i>PRODUCTOS DESHIDRATADOS</i></span>-->
+    <header>
+        <!--Todo: Barra de Navegación -->
+        <div class="navbar">
+            <div class="logo"><span class="titulo-card">Snaktural</span></div>
+            <ul class="link">
+                <li class="lista"><a href="#">Inicio</a></li>
+                <li class="lista"><a href="#promociones">Promociones</a></li>
+                <li class="lista"><a href="#nosotros">Nosotros</a></li>
+                <li class="lista"><a href="#contactos">Contactos</a></li>
+                <li class="lista"><a href="#FAQs">FAQs</a></li>
+                <li class="lista"><a href="#social">Redes Sociales</a></li>
+            </ul>
+            <div class="shopping">
+                <i class="ti ti-shopping-cart"></i>
             </div>
+            <div class="toggle_btn">
+                <i class="ti ti-menu-2"></i>
+            </div>
+        </div>
+        <!-- <div class="dropdown_menu">
+            <li class="lista"><a href="#">Inicio</a></li>
+            <li class="lista"><a href="#">Promociones</a></li>
+            <li class="lista"><a href="#">Nosotros</a></li>
+            <li class="lista"><a href="#">Contactos</a></li>
+            <li class="lista"><a href="#">FAQs</a></li>
+            <li class="lista"><a href="#">Redes Sociales</a></li>
+        </div> -->
+    </header>
+    <main>
+        <!--Todo: Sección principal del Inicio -->
+        <section>
+            <div class="index"></div>
             <div class="hero">
                 <ul>
                     <li><span style="color: red; margin-right: 16rem;">COME BIEN, LUCE BIEN!</span></li>
@@ -51,7 +69,7 @@
                 </ul>
             </div>
         </section>
-        <!--? Sección de Promociones -->
+        <!--Todo: Sección de Promociones -->
         <section>
             <div id="promociones" class="super-promo">
                 <h2 class="title-promo">Super Packs</h2>
@@ -80,14 +98,14 @@
                                 <li style="font-weight: bold; font-size: 22px;">AHORA $36.⁰⁰</li>
                             </ul>
                             <br><br><br>
-                            <button class="btn1">Añadir al Carrito</button>
+                            <button class="btn1" onclick="shopping()">Añadir al Carrito</button>
                         </div>
                     </div>
                 </div>
                 <br><br>
             </div>
         </section>
-        <!--? Catálogo de Productos -->
+        <!--Todo: Catálogo de Productos -->
         <section>
             <div>
                 <h1 id="productos" class="titulo-card">Catálogo de Productos</h1>
@@ -108,7 +126,7 @@
                         <br><br>
                         <span style="color: red;">Precio: $18.⁰⁰</span>
                         <br><br>
-                        <button class="btn1">Añadir al carrito</button>
+                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
                         <br>
                     </div>
                 </div>
@@ -126,7 +144,7 @@
                         <br><br>
                         <span style="color: red;">Precio: $18.⁰⁰</span>
                         <br><br>
-                        <button class="btn1">Añadir al carrito</button>
+                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
                         <br>
                     </div>
                 </div>
@@ -144,7 +162,7 @@
                         <br><br>
                         <span style="color: red;">Precio: $18.⁰⁰</span>
                         <br><br>
-                        <button class="btn1">Añadir al carrito</button>
+                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
                         <br>
                     </div>
                 </div>
@@ -153,257 +171,221 @@
         <br>
         <!--? Slider de Productos -->
         <section>
-            <div>
-                <h3 class="mas-vendidos">Snack's Arándanos</h3>
+            <!--! Esta seccion se cambiara ==Inicio de la seccion== -->
+            <div style="margin: 1rem;" class="swiper mySwiper">
+                <h2 class="mas-vendidos">Nuestros Productos!</h2>
+                <div class="swiper-wrapper">
+                    <div style="display: flex;" class="swiper-slide">
+                        <div style="width: 40%;" class="card-product1">
+                            <div class="card-header">
+                                <h3>Snack's Frambuesa</h3>
+                            </div>
+                            <br>
+                            <div class="card-body">
+                                <img src="./src/productos/Frambuesas.png" height="300px" />
+                                <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Quisquam
+                                    suscipit, molestiae illo
+                                    architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi
+                                    doloremque
+                                    eveniet facere corporis, perferendis aspernatur dolorem.</p>
+                                <br><br>
+                                <span style="color: red;">Precio: $18.⁰⁰</span>
+                                <br><br>
+                                <button class="btn1">Añadir al carrito</button>
+                                <br>
+                            </div>
+                        </div>
+                        <div style="width: 40%;" class="card-product1">
+                            <div class="card-header">
+                                <h3>Snack's Frambuesa</h3>
+                            </div>
+                            <br>
+                            <div class="card-body">
+                                <img src="./src/productos/Frambuesas.png" height="300px" />
+                                <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Quisquam
+                                    suscipit, molestiae illo
+                                    architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi
+                                    doloremque
+                                    eveniet facere corporis, perferendis aspernatur dolorem.</p>
+                                <br><br>
+                                <span style="color: red;">Precio: $18.⁰⁰</span>
+                                <br><br>
+                                <button class="btn1">Añadir al carrito</button>
+                                <br>
+                            </div>
+                        </div>
+                        <div style="width: 40%;" class="card-product1">
+                            <div class="card-header">
+                                <h3>Snack's Frambuesa</h3>
+                            </div>
+                            <br>
+                            <div class="card-body">
+                                <img src="./src/productos/Frambuesas.png" height="300px" />
+                                <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Quisquam
+                                    suscipit, molestiae illo
+                                    architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi
+                                    doloremque
+                                    eveniet facere corporis, perferendis aspernatur dolorem.</p>
+                                <br><br>
+                                <span style="color: red;">Precio: $18.⁰⁰</span>
+                                <br><br>
+                                <button class="btn1">Añadir al carrito</button>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex;" class="swiper-slide">
+                        <div class="card-product1">
+                            <div class="card-header">
+                                <h3>Snack's Frambuesa</h3>
+                            </div>
+                            <br>
+                            <div class="card-body">
+                                <img src="./src/productos/Frambuesas.png" height="300px" />
+                                <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Quisquam
+                                    suscipit, molestiae illo
+                                    architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi
+                                    doloremque
+                                    eveniet facere corporis, perferendis aspernatur dolorem.</p>
+                                <br><br>
+                                <span style="color: red;">Precio: $18.⁰⁰</span>
+                                <br><br>
+                                <button class="btn1">Añadir al carrito</button>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="card-product1">
+                            <div class="card-header">
+                                <h3>Snack's Frambuesa</h3>
+                            </div>
+                            <br>
+                            <div class="card-body">
+                                <img src="./src/productos/Frambuesas.png" height="300px" />
+                                <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Quisquam
+                                    suscipit, molestiae illo
+                                    architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi
+                                    doloremque
+                                    eveniet facere corporis, perferendis aspernatur dolorem.</p>
+                                <br><br>
+                                <span style="color: red;">Precio: $18.⁰⁰</span>
+                                <br><br>
+                                <button class="btn1">Añadir al carrito</button>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="card-product1">
+                            <div class="card-header">
+                                <h3>Snack's Frambuesa</h3>
+                            </div>
+                            <br>
+                            <div class="card-body">
+                                <img src="./src/productos/Frambuesas.png" height="300px" />
+                                <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Quisquam
+                                    suscipit, molestiae illo
+                                    architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi
+                                    doloremque
+                                    eveniet facere corporis, perferendis aspernatur dolorem.</p>
+                                <br><br>
+                                <span style="color: red;">Precio: $18.⁰⁰</span>
+                                <br><br>
+                                <button class="btn1">Añadir al carrito</button>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex;" class="swiper-slide">
+                        <div class="card-product1">
+                            <div class="card-header">
+                                <h3>Snack's Frambuesa</h3>
+                            </div>
+                            <br>
+                            <div class="card-body">
+                                <img src="./src/productos/Frambuesas.png" height="300px" />
+                                <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Quisquam
+                                    suscipit, molestiae illo
+                                    architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi
+                                    doloremque
+                                    eveniet facere corporis, perferendis aspernatur dolorem.</p>
+                                <br><br>
+                                <span style="color: red;">Precio: $18.⁰⁰</span>
+                                <br><br>
+                                <button class="btn1">Añadir al carrito</button>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="card-product1">
+                            <div class="card-header">
+                                <h3>Snack's Frambuesa</h3>
+                            </div>
+                            <br>
+                            <div class="card-body">
+                                <img src="./src/productos/Frambuesas.png" height="300px" />
+                                <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Quisquam
+                                    suscipit, molestiae illo
+                                    architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi
+                                    doloremque
+                                    eveniet facere corporis, perferendis aspernatur dolorem.</p>
+                                <br><br>
+                                <span style="color: red;">Precio: $18.⁰⁰</span>
+                                <br><br>
+                                <button class="btn1">Añadir al carrito</button>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="card-product1">
+                            <div class="card-header">
+                                <h3>Snack's Frambuesa</h3>
+                            </div>
+                            <br>
+                            <div class="card-body">
+                                <img src="./src/productos/Frambuesas.png" height="300px" />
+                                <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Quisquam
+                                    suscipit, molestiae illo
+                                    architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi
+                                    doloremque
+                                    eveniet facere corporis, perferendis aspernatur dolorem.</p>
+                                <br><br>
+                                <span style="color: red;">Precio: $18.⁰⁰</span>
+                                <br><br>
+                                <button class="btn1">Añadir al carrito</button>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="card-product">
-                <div class="card-product1">
-                    <div class="card-header">
-                        <h3>Snack's Arándanos</h3>
-                    </div>
-                    <br>
-                    <div class="card-body">
-                        <img src="./src/productos/Arandanos.png" height="300px" />
-                        <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-                            suscipit, molestiae illo
-                            architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi doloremque
-                            eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                        <br><br>
-                        <span style="color: red;">Precio: $18.⁰⁰</span>
-                        <br><br>
-                        <button class="btn1">Añadir al carrito</button>
-                        <br>
-                    </div>
-                </div>
-                <div class="card-product1">
-                    <div class="card-header">
-                        <h3>Snack's Arándanos</h3>
-                    </div>
-                    <br>
-                    <div class="card-body">
-                        <img src="./src/productos/Arandanos.png" height="300px" />
-                        <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-                            suscipit, molestiae illo
-                            architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi doloremque
-                            eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                        <br><br>
-                        <span style="color: red;">Precio: $18.⁰⁰</span>
-                        <br><br>
-                        <button class="btn1">Añadir al carrito</button>
-                        <br>
-                    </div>
-                </div>
-                <div class="card-product1">
-                    <div class="card-header">
-                        <h3>Snack's Arándanos</h3>
-                    </div>
-                    <br>
-                    <div class="card-body">
-                        <img src="./src/productos/Arandanos.png" height="300px" />
-                        <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-                            suscipit, molestiae illo
-                            architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi doloremque
-                            eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                        <br><br>
-                        <span style="color: red;">Precio: $18.⁰⁰</span>
-                        <br><br>
-                        <button class="btn1">Añadir al carrito</button>
-                        <br>
-                    </div>
-                </div>
-                <div class="card-product1">
-                    <div class="card-header">
-                        <h3>Snack's Arándanos</h3>
-                    </div>
-                    <br>
-                    <div class="card-body">
-                        <img src="./src/productos/Arandanos.png" height="300px" />
-                        <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-                            suscipit, molestiae illo
-                            architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi doloremque
-                            eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                        <br><br>
-                        <span style="color: red;">Precio: $18.⁰⁰</span>
-                        <br><br>
-                        <button class="btn1">Añadir al carrito</button>
-                        <br>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h3 class="mas-vendidos">Snack's Fresa</h3>
-            </div>
-            <div class="card-product">
-                <div class="card-product1">
-                    <div class="card-header">
-                        <h3>Snack's Fresa</h3>
-                    </div>
-                    <br>
-                    <div class="card-body">
-                        <img src="./src/productos/Fresas.png" height="300px" />
-                        <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-                            suscipit, molestiae illo
-                            architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi doloremque
-                            eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                        <br><br>
-                        <span style="color: red;">Precio: $18.⁰⁰</span>
-                        <br><br>
-                        <button class="btn1">Añadir al carrito</button>
-                        <br>
-                    </div>
-                </div>
-                <div class="card-product1">
-                    <div class="card-header">
-                        <h3>Snack's Fresa</h3>
-                    </div>
-                    <br>
-                    <div class="card-body">
-                        <img src="./src/productos/Fresas.png" height="300px" />
-                        <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-                            suscipit, molestiae illo
-                            architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi doloremque
-                            eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                        <br><br>
-                        <span style="color: red;">Precio: $18.⁰⁰</span>
-                        <br><br>
-                        <button class="btn1">Añadir al carrito</button>
-                        <br>
-                    </div>
-                </div>
-                <div class="card-product1">
-                    <div class="card-header">
-                        <h3>Snack's Fresa</h3>
-                    </div>
-                    <br>
-                    <div class="card-body">
-                        <img src="./src/productos/Fresas.png" height="300px" />
-                        <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-                            suscipit, molestiae illo
-                            architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi doloremque
-                            eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                        <br><br>
-                        <span style="color: red;">Precio: $18.⁰⁰</span>
-                        <br><br>
-                        <button class="btn1">Añadir al carrito</button>
-                        <br>
-                    </div>
-                </div>
-                <div class="card-product1">
-                    <div class="card-header">
-                        <h3>Snack's Fresa</h3>
-                    </div>
-                    <br>
-                    <div class="card-body">
-                        <img src="./src/productos/Fresas.png" height="300px" />
-                        <p style="margin-top: 3rem;"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Quisquam
-                            suscipit, molestiae illo
-                            architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi doloremque
-                            eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                        <br><br>
-                        <span style="color: red;">Precio: $18.⁰⁰</span>
-                        <br><br>
-                        <button class="btn1">Añadir al carrito</button>
-                        <br>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h3 class="mas-vendidos">Snack's Frambuesa</h3>
-            </div>
-            <div class="card-product">
-                <div class="card-product1">
-                    <div class="card-header">
-                        <h3>Snack's Frambuesa</h3>
-                    </div>
-                    <br>
-                    <div class="card-body">
-                        <img src="./src/productos/Frambuesas.png" height="300px" />
-                        <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-                            suscipit, molestiae illo
-                            architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi doloremque
-                            eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                        <br><br>
-                        <span style="color: red;">Precio: $18.⁰⁰</span>
-                        <br><br>
-                        <button class="btn1">Añadir al carrito</button>
-                        <br>
-                    </div>
-                </div>
-                <div class="card-product1">
-                    <div class="card-header">
-                        <h3>Snack's Frambuesa</h3>
-                    </div>
-                    <br>
-                    <div class="card-body">
-                        <img src="./src/productos/Frambuesas.png" height="300px" />
-                        <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-                            suscipit, molestiae illo
-                            architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi doloremque
-                            eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                        <br><br>
-                        <span style="color: red;">Precio: $18.⁰⁰</span>
-                        <br><br>
-                        <button class="btn1">Añadir al carrito</button>
-                        <br>
-                    </div>
-                </div>
-                <div class="card-product1">
-                    <div class="card-header">
-                        <h3>Snack's Frambuesa</h3>
-                    </div>
-                    <br>
-                    <div class="card-body">
-                        <img src="./src/productos/Frambuesas.png" height="300px" />
-                        <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-                            suscipit, molestiae illo
-                            architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi doloremque
-                            eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                        <br><br>
-                        <span style="color: red;">Precio: $18.⁰⁰</span>
-                        <br><br>
-                        <button class="btn1">Añadir al carrito</button>
-                        <br>
-                    </div>
-                </div>
-                <div class="card-product1">
-                    <div class="card-header">
-                        <h3>Snack's Frambuesa</h3>
-                    </div>
-                    <br>
-                    <div class="card-body">
-                        <img src="./src/productos/Frambuesas.png" height="300px" />
-                        <p style="margin-top: 3rem;"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Quisquam
-                            suscipit, molestiae illo
-                            architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi doloremque
-                            eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                        <br><br>
-                        <span style="color: red;">Precio: $18.⁰⁰</span>
-                        <br><br>
-                        <button class="btn1">Añadir al carrito</button>
-                        <br>
-                    </div>
-                </div>
-            </div>
+            <!--! ==Fin de la seccion== -->
         </section>
         <br><br>
-        <!--? Seccion Socios -->
-        <section>
-            <h2 id="contactanos" class="titulo-socios">¿Quieres Vender Nuestros Productos?</h2>
-            <br>
-            <center><button class="btn1">Contáctanos</button></center>
+        <!--Todo: Seccion Socios -->
+        <section id="contactanos">
+            <h2 class="titulo-socios">¿Quieres Vender Nuestros Productos?</h2>
+            <div class="contenedor">
+                <button class="btn1" onclick="modal()">Contactános</button>
+            </div>
             <br>
             <div class="socios">
-                <img src="https://thelogisticsworld.com/wp-content/uploads/2023/04/walmart-2.jpg" />
+                <img src="https://edicom.mx/dam/jcr:56ae5073-20b3-4425-af23-143d550a8986/walmart_integration.png" />
                 <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/sams-club-2-logo.png" />
                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Aurrera_logo.svg" />
-                <img
-                    src="https://3dwarehouse.sketchup.com/warehouse/v1.0/content/public/6e50d7b3-e9f5-4071-be36-f38a2d62d85f" />
+                <img src="https://i.pinimg.com/originals/2f/03/15/2f031536c914d18700f97707d3a9c85e.png" />
             </div>
         </section>
         <br><br>
-        <!--? Seccion Nosotros -->
+        <!--Todo: Seccion Nosotros -->
         <section>
             <div class="nosotros">
                 <img src="https://conquer.ar/wp-content/uploads/2020/10/3-Nosotros.png" />
@@ -420,17 +402,65 @@
                 </div>
             </div>
         </section>
-        <br>
-        <!--? Footer -->
-        <footer class="footer">
-            <span>Derechos Reservados &copy; CRU2 - 2023</span>
-            <div class="img-footer">
-                <a class="item" href="#"><img src="./src/img/facebook.svg" /></a>
-                <a class="item1" href="#"><img src="./src/img/whatsapp.svg" /></a>
-                <a href="#"><img src="./src/img/instagram.svg" /></a>
+        <!--Todo: Seccion de Preguntas -->
+        <section id="FAQs">
+            <div class="preguntas">
+                <h1 class="ayuda">¿Como Podemos Ayudarte?</h1>
+                <br>
+                <input class="questions" type="text" placeholder="Preguntános" />
+            </div>
+        </section>
+        <br><br>
+        <!--Todo: Footer -->
+        <footer id="social" class="top">
+            <h1 class="titulo-socios">Snaktural</h1>
+            <div class="links">
+                <div>
+                    <h2>Plataform</h2>
+                    <a href="#">Inicio</a>
+                    <a href="#nosotros">Nosotros</a>
+                </div>
+                <div>
+                    <h2>Cloud</h2>
+                    <a href="#promociones">Promociones</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+            </div>
+        </footer>
+        <footer class="bottom">
+            <div class="legal">
+                <span>CRUD2 &copy; 2023 - Derechos Reservados</span>
+                <a>License</a>
+                <a>Terms</a>
+                <a>Privacy</a>
+            </div>
+            <div class="links">
+                <a style="font-size: 20px; color: #3b5998; cursor: pointer;" class="ti ti-brand-facebook-filled"></a>
+                <a style="font-size: 20px; color: #171515; cursor: pointer;" class="ti ti-brand-github-filled"></a>
+                <a style="font-size: 20px; color: #00acee; cursor: pointer;" class="ti ti-brand-twitter-filled"></a>
             </div>
         </footer>
     </main>
+
+    <!--TODO: Creacion de los sliders -->
+    <!--? Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!--? Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 
 </html>
