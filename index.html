@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--? Importar Css -->
     <link rel="stylesheet" href="./Css/index.css">
-    <link rel="stylesheet" href="./Css/movile_style.css">
     <!--? Importar Js -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./Js/Alert.js"></script>
@@ -15,6 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <!--? Importar Icono -->
     <link rel="shortcut icon" href="./src/strawberry_logo.svg" type="image/x-icon">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <!--? Importar Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,61 +23,63 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <!--? Importar Animacion -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--? Importar Glider Js -->
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <!--* Required Core Stylesheet -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <!--* Optional Theme Stylesheet -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
     <title>Snaktural</title>
 </head>
 
 <body>
-    <header>
-        <!--Todo: Barra de Navegación -->
-        <div class="navbar">
-            <div class="logo"><span class="titulo-card">Snaktural</span></div>
-            <ul class="link">
-                <li class="lista"><a href="#">Inicio</a></li>
-                <li class="lista"><a href="#promociones">Promociones</a></li>
-                <li class="lista"><a href="#nosotros">Nosotros</a></li>
-                <li class="lista"><a href="#contactos">Contactos</a></li>
-                <li class="lista"><a href="#FAQs">FAQs</a></li>
-                <li class="lista"><a href="#social">Redes Sociales</a></li>
-            </ul>
-            <div class="shopping">
-                <i class="ti ti-shopping-cart"></i>
+    <!--Todo: Barra de Navegación -->
+    <header class="page-header">
+        <nav>
+            <div class="trigger-menu-wrapper">
+                <span style="margin-left: 15px;" class="spn-titulo">Snacktural</span>
+                <div class="menu-list">
+                    <ul>
+                        <li><a class="nav-links" href="#">Inicio</a></li>
+                        <li><a class="nav-links" href="#promociones">Promociones</a></li>
+                        <li><a class="nav-links" href="#nosotros">Nosotros</a></li>
+                        <li><a class="nav-links" href="#contactanos">Contacto</a></li>
+                        <li><a class="nav-links" href="#FAQs">FAQs</a></li>
+                        <li><a class="nav-links" href="#social">Redes Sociales</a></li>
+                    </ul>
+                </div>
+                <div class="items">
+                    <span class="ti ti-user-circle" onclick="login()"></span>
+                    <span style="margin-left: 10px;" class="ti ti-shopping-bag"></span>
+                </div>
             </div>
-            <div class="toggle_btn">
-                <i class="ti ti-menu-2"></i>
-            </div>
-        </div>
-        <!-- <div class="dropdown_menu">
-            <li class="lista"><a href="#">Inicio</a></li>
-            <li class="lista"><a href="#">Promociones</a></li>
-            <li class="lista"><a href="#">Nosotros</a></li>
-            <li class="lista"><a href="#">Contactos</a></li>
-            <li class="lista"><a href="#">FAQs</a></li>
-            <li class="lista"><a href="#">Redes Sociales</a></li>
-        </div> -->
+        </nav>
     </header>
     <main>
         <!--Todo: Sección principal del Inicio -->
         <section>
             <div class="index"></div>
-            <div class="hero">
-                <ul>
-                    <li><span style="color: red; margin-right: 16rem;">COME BIEN, LUCE BIEN!</span></li>
-                    <li style="font-family: 'Rajdhani', sans-serif;">+ NUTRITIVO</li>
-                    <li style="font-family: 'Rajdhani', sans-serif;">+ SALUDABLE</li>
-                    <li style="font-family: 'Rajdhani', sans-serif;">+ SUSTENTABLE</li>
-                    <img class="sellos" src="./src/img/sellos.png" height="40px" />
-                </ul>
+            <div class="h">
+                <h2 class="titulo-h">COME BIEN, LUCE BIEN!</h2>
+                <div class="syo">
+                    <p>+ NUTRITIVO</p>
+                    <p style="margin-left: 2rem;">+ SALUDABLE</p>
+                    <p style="margin-left: 2rem;">+ SUSTENTABLE</p>
+                </div>
+                <img src="./src/img/sellos.png" alt="">
             </div>
         </section>
         <!--Todo: Sección de Promociones -->
         <section>
+            <div class="hashtag">
+                <h2 class="hashtag-1">SUPER PAKS</h2>
+                <div>
+                    <p class="spn">#ATODAHORA <i class="ti ti-clock-hour-10"></i></p>
+                    <p class="spn">#SNACKSINCULPA <i class="ti ti-heart"></i></p>
+                    <p class="spn">#SUPERFOOD <i class="ti ti-mood-wink-2"></i></p>
+                </div>
+            </div>
             <div id="promociones" class="super-promo">
-                <h2 class="title-promo">Super Packs</h2>
-                <ul>
-                    <li style="font-style: italic;">#PARAELANTOJO</li>
-                    <li style="font-style: italic;">#SNACKSINCULPA</li>
-                    <li style="font-style: italic;">#SUPERFOOD</li>
-                </ul>
                 <div class="cards">
                     <div class="card">
                         <div class="card-body">
@@ -111,272 +113,583 @@
                 <h1 id="productos" class="titulo-card">Catálogo de Productos</h1>
                 <h3 class="mas-vendidos">Los Más Vendidos!</h3>
             </div>
-            <div class="card-product">
-                <div class="card-product1">
-                    <div class="card-header">
-                        <h3>Snack's más Vendidos!</h3>
-                    </div>
-                    <br>
-                    <div class="card-body">
-                        <img src="./src/productos/Zarzamora.png" width="250px" />
-                        <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-                            suscipit, molestiae illo
-                            architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi doloremque
-                            eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                        <br><br>
-                        <span style="color: red;">Precio: $18.⁰⁰</span>
-                        <br><br>
-                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                        <br>
+            <section>
+                <div>
+                    <div class="glide__track" data-glide-el="track">
+                        <ul style="margin-left: 240px;" class="glide__slides">
+                            <li style="display: flex;" class="glide__slide">
+                                <div class="product-box">
+                                    <div class="p-img-container">
+                                        <div class="p-img">
+                                            <a href="#">
+                                                <img src="./src/productos/Zarzamora.png" class="p-img-front" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--* Texto de la card -->
+                                    <div class="p-box-text">
+                                        <div class="product-category">
+                                            <span>Zarzamora</span>
+                                        </div>
+                                        <a href="#" class="product-title">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, assumenda
+                                            veritatis reiciendis magni nihil, voluptatibus laudantium facilis sequi
+                                            recusandae praesentium commodi nulla ab consequuntur! Iste dolorum eum
+                                            quidem ab quasi?
+                                        </a>
+                                        <br><br>
+                                        <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i
+                                            class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i
+                                            class="ti ti-star"></i>
+                                        <div class="price-buy">
+                                            <p class="p-price">$18.⁰⁰</p>
+                                            <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-box">
+                                    <div class="p-img-container">
+                                        <div class="p-img">
+                                            <a href="#">
+                                                <img src="./src/productos/Frutos_Rojos.png" class="p-img-front" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--* Texto de la card -->
+                                    <div class="p-box-text">
+                                        <div class="product-category">
+                                            <span>Frutos Rojos</span>
+                                        </div>
+                                        <a href="#" class="product-title">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium,
+                                            eveniet. Veniam quibusdam impedit magnam tenetur, corporis expedita qui.
+                                            Ipsam quaerat nesciunt consequuntur vel, labore non reiciendis itaque ab
+                                            repellat rerum?
+                                        </a>
+                                        <br><br>
+                                        <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i
+                                            class="ti ti-star-filled"></i><i class="ti ti-star"></i><i
+                                            class="ti ti-star"></i>
+                                        <div class="price-buy">
+                                            <p class="p-price">$18.⁰⁰</p>
+                                            <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-box">
+                                    <div class="p-img-container">
+                                        <div class="p-img">
+                                            <a href="#">
+                                                <img src="./src/productos/Arandanos.png" class="p-img-front" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--* Texto de la card -->
+                                    <div class="p-box-text">
+                                        <div class="product-category">
+                                            <span>Fresas y Frambuesas</span>
+                                        </div>
+                                        <a href="#" class="product-title">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores corporis
+                                            recusandae dignissimos hic, repellat itaque consequatur, vel minus
+                                            perspiciatis sequi corrupti dolor maxime quisquam earum dolore vitae?
+                                            Perspiciatis, at harum.
+                                        </a>
+                                        <br><br>
+                                        <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i
+                                            class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i
+                                            class="ti ti-star-filled"></i>
+                                        <div class="price-buy">
+                                            <p class="p-price">$18.⁰⁰</p>
+                                            <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="card-product1">
-                    <div class="card-header">
-                        <h3>Snack's más Vendidos!</h3>
-                    </div>
-                    <br>
-                    <div class="card-body">
-                        <img src="./src/productos/Fresas.png" height="310px" />
-                        <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-                            suscipit, molestiae illo
-                            architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi doloremque
-                            eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                        <br><br>
-                        <span style="color: red;">Precio: $18.⁰⁰</span>
-                        <br><br>
-                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                        <br>
-                    </div>
-                </div>
-                <div class="card-product1">
-                    <div class="card-header">
-                        <h3>Snack's más Vendidos!</h3>
-                    </div>
-                    <br>
-                    <div class="card-body">
-                        <img src="./src/productos/Arandanos.png" height="300px" />
-                        <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-                            suscipit, molestiae illo
-                            architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi doloremque
-                            eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                        <br><br>
-                        <span style="color: red;">Precio: $18.⁰⁰</span>
-                        <br><br>
-                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                        <br>
-                    </div>
-                </div>
-            </div>
+            </section>
         </section>
-        <br>
         <!--? Slider de Productos -->
-        <section>
-            <!--! Esta seccion se cambiara ==Inicio de la seccion== -->
-            <div style="margin: 1rem;" class="swiper mySwiper">
-                <h2 class="mas-vendidos">Nuestros Productos!</h2>
-                <div class="swiper-wrapper">
-                    <div style="display: flex;" class="swiper-slide">
-                        <div style="width: 40%;" class="card-product1">
-                            <div class="card-header">
-                                <h3>Snack's Frambuesa</h3>
+        <h2 class="mas-vendidos" style="margin-top: 50px; margin-left: 30px;">Nuestros Productos</h2>
+        <section class="p-slider">
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li style="display: flex;" class="glide__slide">
+                            <div class="product-box">
+                                <p class="p-discount"> -20%</p>
+                                <br><br><br>
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./src/productos/Arandanos.png" class="p-img-front" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--* Texto de la card -->
+                                <div class="p-box-text">
+                                    <div class="product-category">
+                                        <span>Arándanos</span>
+                                    </div>
+                                    <a href="#" class="product-title">
+                                        Fruto de un grupo de arbustos enanos.
+                                    </a>
+                                    <div class="price-buy">
+                                        <p class="p-price">$18.⁰⁰</p>
+                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                    </div>
+                                </div>
                             </div>
-                            <br>
-                            <div class="card-body">
-                                <img src="./src/productos/Frambuesas.png" height="300px" />
-                                <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Quisquam
-                                    suscipit, molestiae illo
-                                    architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi
-                                    doloremque
-                                    eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                                <br><br>
-                                <span style="color: red;">Precio: $18.⁰⁰</span>
-                                <br><br>
-                                <button class="btn1">Añadir al carrito</button>
-                                <br>
+                            <div class="product-box">
+                                <p class="p-discount"> -20%</p>
+                                <br><br><br>
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./src/productos/Arandanos.png" class="p-img-front" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--* Texto de la card -->
+                                <div class="p-box-text">
+                                    <div class="product-category">
+                                        <span>Arándanos</span>
+                                    </div>
+                                    <a href="#" class="product-title">
+                                        Fruto de un grupo de arbustos enanos.
+                                    </a>
+                                    <div class="price-buy">
+                                        <p class="p-price">$18.⁰⁰</p>
+                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div style="width: 40%;" class="card-product1">
-                            <div class="card-header">
-                                <h3>Snack's Frambuesa</h3>
+                            <div class="product-box">
+                                <p class="p-discount"> -20%</p>
+                                <br><br><br>
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./src/productos/Arandanos.png" class="p-img-front" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--* Texto de la card -->
+                                <div class="p-box-text">
+                                    <div class="product-category">
+                                        <span>Arándanos</span>
+                                    </div>
+                                    <a href="#" class="product-title">
+                                        Fruto de un grupo de arbustos enanos.
+                                    </a>
+                                    <div class="price-buy">
+                                        <p class="p-price">$18.⁰⁰</p>
+                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                    </div>
+                                </div>
                             </div>
-                            <br>
-                            <div class="card-body">
-                                <img src="./src/productos/Frambuesas.png" height="300px" />
-                                <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Quisquam
-                                    suscipit, molestiae illo
-                                    architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi
-                                    doloremque
-                                    eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                                <br><br>
-                                <span style="color: red;">Precio: $18.⁰⁰</span>
-                                <br><br>
-                                <button class="btn1">Añadir al carrito</button>
-                                <br>
+                            <div class="product-box">
+                                <p class="p-discount"> -20%</p>
+                                <br><br><br>
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./src/productos/Arandanos.png" class="p-img-front" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--* Texto de la card -->
+                                <div class="p-box-text">
+                                    <div class="product-category">
+                                        <span>Arándanos</span>
+                                    </div>
+                                    <a href="#" class="product-title">
+                                        Fruto de un grupo de arbustos enanos.
+                                    </a>
+                                    <div class="price-buy">
+                                        <p class="p-price">$18.⁰⁰</p>
+                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div style="width: 40%;" class="card-product1">
-                            <div class="card-header">
-                                <h3>Snack's Frambuesa</h3>
+                            <div class="product-box">
+                                <p class="p-discount"> -20%</p>
+                                <br><br><br>
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./src/productos/Arandanos.png" class="p-img-front" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--* Texto de la card -->
+                                <div class="p-box-text">
+                                    <div class="product-category">
+                                        <span>Arándanos</span>
+                                    </div>
+                                    <a href="#" class="product-title">
+                                        Fruto de un grupo de arbustos enanos.
+                                    </a>
+                                    <div class="price-buy">
+                                        <p class="p-price">$18.⁰⁰</p>
+                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                    </div>
+                                </div>
                             </div>
-                            <br>
-                            <div class="card-body">
-                                <img src="./src/productos/Frambuesas.png" height="300px" />
-                                <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Quisquam
-                                    suscipit, molestiae illo
-                                    architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi
-                                    doloremque
-                                    eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                                <br><br>
-                                <span style="color: red;">Precio: $18.⁰⁰</span>
-                                <br><br>
-                                <button class="btn1">Añadir al carrito</button>
-                                <br>
+                        </li>
+                        <li style="display: flex; align-items: center;" class="glide__slide">
+                            <div class="product-box">
+                                <p class="p-discount"> -20%</p>
+                                <br><br><br>
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./src/productos/Frambuesas.png" class="p-img-front" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--* Texto de la card -->
+                                <div class="p-box-text">
+                                    <div class="product-category">
+                                        <span>Frambuesas</span>
+                                    </div>
+                                    <a href="#" class="product-title">
+                                        Fruto de un grupo de arbustos enanos.
+                                    </a>
+                                    <div class="price-buy">
+                                        <p class="p-price">$18.⁰⁰</p>
+                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div style="display: flex;" class="swiper-slide">
-                        <div class="card-product1">
-                            <div class="card-header">
-                                <h3>Snack's Frambuesa</h3>
+                            <div class="product-box">
+                                <p class="p-discount"> -20%</p>
+                                <br><br><br>
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./src/productos/Frambuesas.png" class="p-img-front" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--* Texto de la card -->
+                                <div class="p-box-text">
+                                    <div class="product-category">
+                                        <span>Frambuesas</span>
+                                    </div>
+                                    <a href="#" class="product-title">
+                                        Fruto de un grupo de arbustos enanos.
+                                    </a>
+                                    <div class="price-buy">
+                                        <p class="p-price">$18.⁰⁰</p>
+                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                    </div>
+                                </div>
                             </div>
-                            <br>
-                            <div class="card-body">
-                                <img src="./src/productos/Frambuesas.png" height="300px" />
-                                <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Quisquam
-                                    suscipit, molestiae illo
-                                    architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi
-                                    doloremque
-                                    eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                                <br><br>
-                                <span style="color: red;">Precio: $18.⁰⁰</span>
-                                <br><br>
-                                <button class="btn1">Añadir al carrito</button>
-                                <br>
+                            <div class="product-box">
+                                <p class="p-discount"> -20%</p>
+                                <br><br><br>
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./src/productos/Frambuesas.png" class="p-img-front" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--* Texto de la card -->
+                                <div class="p-box-text">
+                                    <div class="product-category">
+                                        <span>Frambuesas</span>
+                                    </div>
+                                    <a href="#" class="product-title">
+                                        Fruto de un grupo de arbustos enanos.
+                                    </a>
+                                    <div class="price-buy">
+                                        <p class="p-price">$18.⁰⁰</p>
+                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-product1">
-                            <div class="card-header">
-                                <h3>Snack's Frambuesa</h3>
+                            <div class="product-box">
+                                <p class="p-discount"> -20%</p>
+                                <br><br><br>
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./src/productos/Frambuesas.png" class="p-img-front" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--* Texto de la card -->
+                                <div class="p-box-text">
+                                    <div class="product-category">
+                                        <span>Frambuesas</span>
+                                    </div>
+                                    <a href="#" class="product-title">
+                                        Fruto de un grupo de arbustos enanos.
+                                    </a>
+                                    <div class="price-buy">
+                                        <p class="p-price">$18.⁰⁰</p>
+                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                    </div>
+                                </div>
                             </div>
-                            <br>
-                            <div class="card-body">
-                                <img src="./src/productos/Frambuesas.png" height="300px" />
-                                <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Quisquam
-                                    suscipit, molestiae illo
-                                    architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi
-                                    doloremque
-                                    eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                                <br><br>
-                                <span style="color: red;">Precio: $18.⁰⁰</span>
-                                <br><br>
-                                <button class="btn1">Añadir al carrito</button>
-                                <br>
+                            <div class="product-box">
+                                <p class="p-discount"> -20%</p>
+                                <br><br><br>
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./src/productos/Frambuesas.png" class="p-img-front" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--* Texto de la card -->
+                                <div class="p-box-text">
+                                    <div class="product-category">
+                                        <span>Frambuesas</span>
+                                    </div>
+                                    <a href="#" class="product-title">
+                                        Fruto de un grupo de arbustos enanos.
+                                    </a>
+                                    <div class="price-buy">
+                                        <p class="p-price">$18.⁰⁰</p>
+                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-product1">
-                            <div class="card-header">
-                                <h3>Snack's Frambuesa</h3>
+                        </li>
+                        <li style="display: flex;" class="glide__slide">
+                            <div class="product-box">
+                                <p class="p-discount"> -20%</p>
+                                <br><br><br>
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./src/productos/Fresas.png" class="p-img-front" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--* Texto de la card -->
+                                <div class="p-box-text">
+                                    <div class="product-category">
+                                        <span>Fresas</span>
+                                    </div>
+                                    <a href="#" class="product-title">
+                                        Fruto de un grupo de arbustos enanos.
+                                    </a>
+                                    <div class="price-buy">
+                                        <p class="p-price">$18.⁰⁰</p>
+                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                    </div>
+                                </div>
                             </div>
-                            <br>
-                            <div class="card-body">
-                                <img src="./src/productos/Frambuesas.png" height="300px" />
-                                <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Quisquam
-                                    suscipit, molestiae illo
-                                    architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi
-                                    doloremque
-                                    eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                                <br><br>
-                                <span style="color: red;">Precio: $18.⁰⁰</span>
-                                <br><br>
-                                <button class="btn1">Añadir al carrito</button>
-                                <br>
+                            <div class="product-box">
+                                <p class="p-discount"> -20%</p>
+                                <br><br><br>
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./src/productos/Fresas.png" class="p-img-front" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--* Texto de la card -->
+                                <div class="p-box-text">
+                                    <div class="product-category">
+                                        <span>Fresas</span>
+                                    </div>
+                                    <a href="#" class="product-title">
+                                        Fruto de un grupo de arbustos enanos.
+                                    </a>
+                                    <div class="price-buy">
+                                        <p class="p-price">$18.⁰⁰</p>
+                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div style="display: flex;" class="swiper-slide">
-                        <div class="card-product1">
-                            <div class="card-header">
-                                <h3>Snack's Frambuesa</h3>
+                            <div class="product-box">
+                                <p class="p-discount"> -20%</p>
+                                <br><br><br>
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./src/productos/Fresas.png" class="p-img-front" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--* Texto de la card -->
+                                <div class="p-box-text">
+                                    <div class="product-category">
+                                        <span>Fresas</span>
+                                    </div>
+                                    <a href="#" class="product-title">
+                                        Fruto de un grupo de arbustos enanos.
+                                    </a>
+                                    <div class="price-buy">
+                                        <p class="p-price">$18.⁰⁰</p>
+                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                    </div>
+                                </div>
                             </div>
-                            <br>
-                            <div class="card-body">
-                                <img src="./src/productos/Frambuesas.png" height="300px" />
-                                <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Quisquam
-                                    suscipit, molestiae illo
-                                    architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi
-                                    doloremque
-                                    eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                                <br><br>
-                                <span style="color: red;">Precio: $18.⁰⁰</span>
-                                <br><br>
-                                <button class="btn1">Añadir al carrito</button>
-                                <br>
+                            <div class="product-box">
+                                <p class="p-discount"> -20%</p>
+                                <br><br><br>
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./src/productos/Fresas.png" class="p-img-front" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--* Texto de la card -->
+                                <div class="p-box-text">
+                                    <div class="product-category">
+                                        <span>Fresas</span>
+                                    </div>
+                                    <a href="#" class="product-title">
+                                        Fruto de un grupo de arbustos enanos.
+                                    </a>
+                                    <div class="price-buy">
+                                        <p class="p-price">$18.⁰⁰</p>
+                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-product1">
-                            <div class="card-header">
-                                <h3>Snack's Frambuesa</h3>
+                            <div class="product-box">
+                                <p class="p-discount"> -20%</p>
+                                <br><br><br>
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./src/productos/Fresas.png" class="p-img-front" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--* Texto de la card -->
+                                <div class="p-box-text">
+                                    <div class="product-category">
+                                        <span>Fresas</span>
+                                    </div>
+                                    <a href="#" class="product-title">
+                                        Fruto de un grupo de arbustos enanos.
+                                    </a>
+                                    <div class="price-buy">
+                                        <p class="p-price">$18.⁰⁰</p>
+                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                    </div>
+                                </div>
                             </div>
-                            <br>
-                            <div class="card-body">
-                                <img src="./src/productos/Frambuesas.png" height="300px" />
-                                <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Quisquam
-                                    suscipit, molestiae illo
-                                    architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi
-                                    doloremque
-                                    eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                                <br><br>
-                                <span style="color: red;">Precio: $18.⁰⁰</span>
-                                <br><br>
-                                <button class="btn1">Añadir al carrito</button>
-                                <br>
-                            </div>
-                        </div>
-                        <div class="card-product1">
-                            <div class="card-header">
-                                <h3>Snack's Frambuesa</h3>
-                            </div>
-                            <br>
-                            <div class="card-body">
-                                <img src="./src/productos/Frambuesas.png" height="300px" />
-                                <p style="margin-top: 3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Quisquam
-                                    suscipit, molestiae illo
-                                    architecto recusandae vitae error cum fugiat nulla repellendus est. Laborum quasi
-                                    doloremque
-                                    eveniet facere corporis, perferendis aspernatur dolorem.</p>
-                                <br><br>
-                                <span style="color: red;">Precio: $18.⁰⁰</span>
-                                <br><br>
-                                <button class="btn1">Añadir al carrito</button>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
-                <br><br>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
             </div>
-            <!--! ==Fin de la seccion== -->
         </section>
-        <br><br>
+        <section class="p-slider">
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul style="margin-left: 50px;" class="glide__slides">
+                        <li style="display: flex;" class="glide__slide">
+                            <div class="product-box">
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./src/productos/Zarzamora.png" class="p-img-front" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--* Texto de la card -->
+                                <div class="p-box-text">
+                                    <div class="product-category">
+                                        <span>Zarzamora</span>
+                                    </div>
+                                    <a href="#" class="product-title">
+                                    </a>
+                                    <div class="price-buy">
+                                        <p class="p-price">$18.⁰⁰</p>
+                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./src/productos/Frutos_Rojos.png" class="p-img-front" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--* Texto de la card -->
+                                <div class="p-box-text">
+                                    <div class="product-category">
+                                        <span>Frutos Rojos</span>
+                                    </div>
+                                    <a href="#" class="product-title">
+                                    </a>
+                                    <div class="price-buy">
+                                        <p class="p-price">$18.⁰⁰</p>
+                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./src/productos/Fresas_y_Frambuesas.png" class="p-img-front"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--* Texto de la card -->
+                                <div class="p-box-text">
+                                    <div class="product-category">
+                                        <span>Fresas y Frambuesas</span>
+                                    </div>
+                                    <a href="#" class="product-title">
+                                    </a>
+                                    <div class="price-buy">
+                                        <p class="p-price">$18.⁰⁰</p>
+                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./src/productos/Fresa_y_Zarzamora.png" class="p-img-front" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--* Texto de la card -->
+                                <div class="p-box-text">
+                                    <div class="product-category">
+                                        <span>Fresa y Zarzamora</span>
+                                    </div>
+                                    <a href="#" class="product-title">
+                                    </a>
+                                    <div class="price-buy">
+                                        <p class="p-price">$18.⁰⁰</p>
+                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
         <!--Todo: Seccion Socios -->
         <section id="contactanos">
-            <h2 class="titulo-socios">¿Quieres Vender Nuestros Productos?</h2>
-            <div class="contenedor">
-                <button class="btn1" onclick="modal()">Contactános</button>
+            <div>
+                <h2 class="titulo-socios">¿Quieres Vender Nuestros Productos?</h2>
+                <div class="contenedor">
+                    <button class="btn1" onclick="modal()">Contactános</button>
+                </div>
             </div>
-            <br>
             <div class="socios">
                 <img src="https://edicom.mx/dam/jcr:56ae5073-20b3-4425-af23-143d550a8986/walmart_integration.png" />
                 <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/sams-club-2-logo.png" />
@@ -391,29 +704,60 @@
                 <img src="https://conquer.ar/wp-content/uploads/2020/10/3-Nosotros.png" />
                 <div class="nosotros-texto">
                     <h3 id="nosotros">Nosotros</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur atque, velit aut temporibus
-                        fugiat consequatur ullam molestias dolor cum pariatur? Aspernatur eligendi odio laboriosam ut
-                        assumenda veritatis magnam, corporis rem?</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam eum ratione est placeat
-                        molestiae, possimus minima modi reprehenderit. Molestiae quod cupiditate ullam sint sit alias
-                        facere incidunt numquam. Incidunt, ab?</p>
+                    <p>Somos una empresa dedicada a la elaboracion de snacks de frutos rojos deshidratados de forma
+                        natural, para cuidar la alimentacion de nuestros clientes, asi mismo, garantizar el cuidado del
+                        medio ambiente con el mismo, ya que se puede realizar, ademas que satisfacemos el antojo de un
+                        snak principalmente de las personas que desean cuidar su salud sustituyendo los snaks chatarra.
+                    </p>
+                    <p>Se puede considerar una pequeña empresa debido a uestra capacidad de producció, a nuestro
+                        limitado alcance y que debido a lo que produciomos, nos limitamos en llegar a mas clientes o
+                        explorar nuevos posibles mercados.</p>
                     <br>
-                    <button class="btn2">Conócenos</button>
+                    <div class="mision-vision">
+                        <div>
+                            <h2>Misión</h2>
+                            <p>Nuestra misión es ser una empresa lider en productos de consumo de manera nacional e
+                                internacional, centrada en la produccion de alimentos convenientes y ofrecer a los
+                                consumidores los mejores snaks con sensaciones innovadoras, de calidad 100% naturales.
+                            </p>
+                        </div>
+                        <div>
+                            <h2>Visión</h2>
+                            <p>La vision de <a style="color: red; font-weight: 500;">Snaktural</a> se encamina a la
+                                inclusion y el cuidado
+                                de sus
+                                clientes como sus trabajadores y accionistas, impulsada por su medio, su espiritu de
+                                competencia en el mercado, asi mismo garantizar el cuidado del medio ambiente, buscando
+                                formar parte del mercado competitivo y destacar como la mejor compañia.</p>
+                        </div>
+                    </div>
+                    <footer class="footer-nosotros">
+                        <div class="filed">
+                            <a style="color: #3b5998; cursor: pointer;" class="ti ti-brand-facebook-filled"></a>
+                            <a style="color: #171515; cursor: pointer;" class="ti ti-brand-github-filled"></a>
+                            <a style="color: #00acee; cursor: pointer;" class="ti ti-brand-twitter-filled"></a>
+                        </div>
+                    </footer>
                 </div>
             </div>
         </section>
         <!--Todo: Seccion de Preguntas -->
         <section id="FAQs">
             <div class="preguntas">
-                <h1 class="ayuda">¿Como Podemos Ayudarte?</h1>
+                <h1 class="ayuda">¿Cómo Podemos Ayudarte?</h1>
                 <br>
-                <input class="questions" type="text" placeholder="Preguntános" />
+                <div class="group-button">
+                    <input class="questions" type="text" placeholder="Preguntános" />
+                    <div>
+                        <button class="btn3" type="submit" onclick="respuesta()">Enviar</button>
+                    </div>
+                </div>
             </div>
         </section>
         <br><br>
         <!--Todo: Footer -->
         <footer id="social" class="top">
-            <h1 class="titulo-socios">Snaktural</h1>
+            <h1 class="titulo-footer">Snacktural</h1>
             <div class="links">
                 <div>
                     <h2>Plataform</h2>
@@ -430,9 +774,6 @@
         <footer class="bottom">
             <div class="legal">
                 <span>CRUD2 &copy; 2023 - Derechos Reservados</span>
-                <a>License</a>
-                <a>Terms</a>
-                <a>Privacy</a>
             </div>
             <div class="links">
                 <a style="font-size: 20px; color: #3b5998; cursor: pointer;" class="ti ti-brand-facebook-filled"></a>
@@ -441,26 +782,8 @@
             </div>
         </footer>
     </main>
-
-    <!--TODO: Creacion de los sliders -->
-    <!--? Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <!--? Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
 </body>
+
+<script>new Glide('.glide').mount()</script>
 
 </html>
